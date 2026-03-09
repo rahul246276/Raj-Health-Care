@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Doctors — Raj Health Care</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-brand"><div class="brand-icon"><i class="fas fa-heartbeat"></i></div>Raj Health Care</a>
+    <div class="nav-menu" id="navMenu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="doctors.html" class="nav-link active">Doctors</a>
+      <a href="appointment.html" class="nav-link">Appointment</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <a href="appointment.html" class="btn btn-primary nav-cta"><i class="fas fa-calendar-check"></i> Book Now</a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="page-header-pattern"></div>
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Doctors</span></div>
+    <h1>Our Expert Medical Team</h1>
+    <p>Meet the dedicated specialists who bring expertise, experience, and compassion to every patient</p>
+  </div>
+</section>
+
+<section class="doctors-filter">
+  <div class="container">
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All Doctors</button>
+      <button class="filter-btn" data-filter="cardiology">Cardiology</button>
+      <button class="filter-btn" data-filter="neurology">Neurology</button>
+      <button class="filter-btn" data-filter="pediatrics">Pediatrics</button>
+      <button class="filter-btn" data-filter="orthopedics">Orthopedics</button>
+      <button class="filter-btn" data-filter="gynecology">Gynecology</button>
+    </div>
+  </div>
+</section>
+
+<section class="doctors-section">
+  <div class="container">
+    <div class="doctors-grid">
+
+      <div class="doctor-card fade-in" data-category="cardiology">
+        <div class="doctor-img">
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&auto=format&fit=crop&q=80" alt="Dr. Rajesh Kumar">
+          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Rajesh Kumar</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Senior Cardiologist</p>
+          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 15+ Years Experience</p>
+          <div class="doctor-details">
+            <p><strong>Education:</strong> MBBS, MD (Cardiology), DM</p>
+            <p><strong>Specialisation:</strong> Interventional Cardiology</p>
+            <p><strong>Languages:</strong> English, Hindi, Punjabi</p>
+          </div>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+        </div>
+      </div>
+
+      <div class="doctor-card fade-in delay-1" data-category="pediatrics">
+        <div class="doctor-img">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&auto=format&fit=crop&q=80" alt="Dr. Priya Sharma">
+          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Priya Sharma</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Pediatric Specialist</p>
+          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 12+ Years Experience</p>
+          <div class="doctor-details">
+            <p><strong>Education:</strong> MBBS, MD (Pediatrics)</p>
+            <p><strong>Specialisation:</strong> Neonatology</p>
+            <p><strong>Languages:</strong> English, Hindi, Marathi</p>
+          </div>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+        </div>
+      </div>
+
+      <div class="doctor-card fade-in delay-2" data-category="neurology">
+        <div class="doctor-img">
+          <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=500&auto=format&fit=crop&q=80" alt="Dr. Amit Patel">
+          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Amit Patel</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Neurosurgeon</p>
+          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 18+ Years Experience</p>
+          <div class="doctor-details">
+            <p><strong>Education:</strong> MBBS, MS (Neurosurgery), MCh</p>
+            <p><strong>Specialisation:</strong> Brain &amp; Spine Surgery</p>
+            <p><strong>Languages:</strong> English, Hindi, Gujarati</p>
+          </div>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+        </div>
+      </div>
+
+      <div class="doctor-card fade-in" data-category="gynecology">
+        <div class="doctor-img">
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=500&auto=format&fit=crop&q=80" alt="Dr. Sneha Reddy">
+          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Sneha Reddy</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Gynecologist</p>
+          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 10+ Years Experience</p>
+          <div class="doctor-details">
+            <p><strong>Education:</strong> MBBS, MS (OB-GYN)</p>
+            <p><strong>Specialisation:</strong> High-Risk Pregnancy</p>
+            <p><strong>Languages:</strong> English, Hindi, Telugu</p>
+          </div>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+        </div>
+      </div>
+
+      <div class="doctor-card fade-in delay-1" data-category="orthopedics">
+        <div class="doctor-img">
+          <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=500&auto=format&fit=crop&q=80" alt="Dr. Vikram Singh">
+          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Vikram Singh</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Orthopedic Surgeon</p>
+          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 14+ Years Experience</p>
+          <div class="doctor-details">
+            <p><strong>Education:</strong> MBBS, MS (Orthopedics)</p>
+            <p><strong>Specialisation:</strong> Joint Replacement</p>
+            <p><strong>Languages:</strong> English, Hindi, Punjabi</p>
+          </div>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+        </div>
+      </div>
+
+      <div class="doctor-card fade-in delay-2" data-category="cardiology">
+        <div class="doctor-img">
+          <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?w=500&auto=format&fit=crop&q=80" alt="Dr. Anjali Gupta">
+          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Anjali Gupta</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Cardiac Surgeon</p>
+          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 20+ Years Experience</p>
+          <div class="doctor-details">
+            <p><strong>Education:</strong> MBBS, MS (Cardiothoracic)</p>
+            <p><strong>Specialisation:</strong> Open Heart Surgery</p>
+            <p><strong>Languages:</strong> English, Hindi, Bengali</p>
+          </div>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+        </div>
+      </div>
+
+      <div class="doctor-card fade-in" data-category="neurology">
+        <div class="doctor-img">
+          <img src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?w=500&auto=format&fit=crop&q=80" alt="Dr. Rahul Mehra">
+          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Rahul Mehra</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Neurologist</p>
+          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 11+ Years Experience</p>
+          <div class="doctor-details">
+            <p><strong>Education:</strong> MBBS, MD (Neurology)</p>
+            <p><strong>Specialisation:</strong> Stroke Management</p>
+            <p><strong>Languages:</strong> English, Hindi, Urdu</p>
+          </div>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+        </div>
+      </div>
+
+      <div class="doctor-card fade-in delay-1" data-category="gynecology">
+        <div class="doctor-img">
+          <img src="https://images.unsplash.com/photo-1643297654416-05795d62e39c?w=500&auto=format&fit=crop&q=80" alt="Dr. Meena Iyer">
+          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Meena Iyer</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Obstetrician</p>
+          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 13+ Years Experience</p>
+          <div class="doctor-details">
+            <p><strong>Education:</strong> MBBS, MD (OB-GYN)</p>
+            <p><strong>Specialisation:</strong> Infertility Treatment</p>
+            <p><strong>Languages:</strong> English, Hindi, Tamil</p>
+          </div>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+        </div>
+      </div>
+
+      <div class="doctor-card fade-in delay-2" data-category="orthopedics">
+        <div class="doctor-img">
+          <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=500&auto=format&fit=crop&q=80" alt="Dr. Arjun Nair">
+          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Arjun Nair</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Spine Specialist</p>
+          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 16+ Years Experience</p>
+          <div class="doctor-details">
+            <p><strong>Education:</strong> MBBS, MS (Orthopedics)</p>
+            <p><strong>Specialisation:</strong> Spine Surgery</p>
+            <p><strong>Languages:</strong> English, Hindi, Malayalam</p>
+          </div>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="stats doctor-stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card fade-in"><div class="stat-number">25<span class="stat-accent">+</span></div><div class="stat-label">Expert Doctors</div></div>
+      <div class="stat-card fade-in delay-1"><div class="stat-number">15<span class="stat-accent">+</span></div><div class="stat-label">Specialties</div></div>
+      <div class="stat-card fade-in delay-2"><div class="stat-number">200<span class="stat-accent">+</span></div><div class="stat-label">Years Combined Experience</div></div>
+      <div class="stat-card fade-in delay-3"><div class="stat-number">50,000<span class="stat-accent">+</span></div><div class="stat-label">Patients Treated</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Book an Appointment with Our Specialists</h2>
+    <p>Our expert doctors are ready to provide you with the best medical care possible.</p>
+    <div class="cta-buttons">
+      <a href="appointment.html" class="btn btn-white btn-large"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+      <a href="contact.html" class="btn btn-outline-white btn-large"><i class="fas fa-phone"></i> Call Us</a>
+    </div>
+  </div>
+</section>
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-wrap">
+          <div class="footer-brand">
+            <div class="brand-icon"><i class="fas fa-heartbeat"></i></div>
+            Raj Health Care
+          </div>
+          <div class="footer-tagline">Excellence in Healthcare Since 2004</div>
+        </div>
+        <p class="footer-desc">Providing quality healthcare services with compassion and excellence. Your health and well-being are our highest priority.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="doctors.html">Our Doctors</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Specialties</h4>
+        <ul>
+          <li><a href="services.html">General Medicine</a></li>
+          <li><a href="services.html">Cardiology</a></li>
+          <li><a href="services.html">Neurology</a></li>
+          <li><a href="services.html">Pediatrics</a></li>
+          <li><a href="services.html">Orthopedics</a></li>
+          <li><a href="services.html">Gynecology</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>123 Health Street, Medical District<br>City — 110001</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <span><a href="tel:+919876543210">+91 98765 43210</a><br><a href="tel:+919876543211">+91 98765 43211 (Emergency)</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <span><a href="mailto:info@rajhealthcare.com">info@rajhealthcare.com</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-clock"></i>
+          <span>Mon–Sat: 9AM–6PM<br>Emergency: 24/7</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2024 Raj Health Care. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

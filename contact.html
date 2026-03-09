@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Raj Health Care</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-brand"><div class="brand-icon"><i class="fas fa-heartbeat"></i></div>Raj Health Care</a>
+    <div class="nav-menu" id="navMenu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="doctors.html" class="nav-link">Doctors</a>
+      <a href="appointment.html" class="nav-link">Appointment</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </div>
+    <a href="appointment.html" class="btn btn-primary nav-cta"><i class="fas fa-calendar-check"></i> Book Now</a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="page-header-pattern"></div>
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Contact</span></div>
+    <h1>Get in Touch</h1>
+    <p>We're here to help — reach out to our team for any healthcare enquiry</p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-form-card animate-fade-up">
+        <h2>Send Us a Message</h2>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="appointment">Appointment Enquiry</option>
+                <option value="general">General Information</option>
+                <option value="feedback">Feedback &amp; Suggestions</option>
+                <option value="complaint">Complaint</option>
+                <option value="billing">Billing &amp; Insurance</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Please describe your enquiry in detail. Our team will respond within 24 hours."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-large btn-full">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+
+      <div class="contact-sidebar animate-fade-up delay-2">
+        <div class="info-card">
+          <h3>Contact Information</h3>
+          <div class="info-item">
+            <div class="info-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="info-item-text">
+              <h4>Address</h4>
+              <p>123 Health Street, Medical District<br>City — 110001<br>Near City Hospital, Main Road</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-item-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="info-item-text">
+              <h4>Phone Numbers</h4>
+              <p>Main: <a href="tel:+919876543210" style="color:var(--teal)">+91 98765 43210</a></p>
+              <p>Emergency: <a href="tel:+919876543211" style="color:var(--danger)">+91 98765 43211</a></p>
+              <p>Appointments: <a href="tel:+919876543212" style="color:var(--teal)">+91 98765 43212</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-item-icon"><i class="fas fa-envelope"></i></div>
+            <div class="info-item-text">
+              <h4>Email</h4>
+              <p><a href="mailto:info@rajhealthcare.com" style="color:var(--teal)">info@rajhealthcare.com</a></p>
+              <p><a href="mailto:appointments@rajhealthcare.com" style="color:var(--teal)">appointments@rajhealthcare.com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>Working Hours</h3>
+          <div class="hours-item"><span class="day">Monday – Friday</span><span class="time">9:00 AM – 6:00 PM</span></div>
+          <div class="hours-item"><span class="day">Saturday</span><span class="time">9:00 AM – 4:00 PM</span></div>
+          <div class="hours-item"><span class="day">Sunday</span><span class="time">10:00 AM – 2:00 PM</span></div>
+          <div class="hours-item emg"><span class="day"><i class="fas fa-ambulance" style="margin-right:.4rem"></i> Emergency</span><span class="time">24 / 7 Available</span></div>
+        </div>
+
+        <div class="info-card social-card">
+          <h3>Follow Us</h3>
+          <p>Stay connected for health tips, updates, and news</p>
+          <div class="social-grid">
+            <a href="#" class="social-link-item"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#" class="social-link-item"><i class="fab fa-twitter"></i> Twitter / X</a>
+            <a href="#" class="social-link-item"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#" class="social-link-item"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            <a href="#" class="social-link-item"><i class="fab fa-youtube"></i> YouTube</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="map-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Find Us</span>
+      <h2>Our Location</h2>
+      <div class="section-divider"><div class="line"></div><div class="dot"></div><div class="line"></div></div>
+    </div>
+    <div class="map-container">
+      <div class="map-placeholder">
+        <i class="fas fa-map-marked-alt"></i>
+        <h3>123 Health Street, Medical District</h3>
+        <p>City — 110001, Near City Hospital, Main Road</p>
+        <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fas fa-directions"></i> Get Directions
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">FAQ</span>
+      <h2>Frequently Asked Questions</h2>
+      <div class="section-divider"><div class="line"></div><div class="dot"></div><div class="line"></div></div>
+      <p>Quick answers to the questions we hear most often</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question"><h3>How do I book an appointment?</h3><i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer"><p>You can book online via our website appointment form, call our helpline at +91 98765 43212, or visit the hospital reception in person. Online booking is quickest and available 24/7.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h3>Do you accept health insurance?</h3><i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer"><p>Yes, we accept most major health insurance plans including government and private schemes. Contact our billing team at +91 98765 43213 to verify your coverage before your visit.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h3>What should I bring for my first visit?</h3><i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer"><p>Please bring your government-issued ID, insurance card, previous medical records, a list of current medications, and any relevant test reports. We recommend arriving 15 minutes before your scheduled time.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h3>Do you provide emergency services?</h3><i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer"><p>Yes — our emergency department is open 24 hours a day, 7 days a week, staffed by experienced emergency physicians and nurses. Call +91 98765 43211 for immediate assistance or ambulance dispatch.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h3>How can I access my test results?</h3><i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer"><p>Most results are ready within 24–48 hours. You may collect them from our lab reception or request delivery via email. For urgent results, please call our laboratory directly.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h3>Can I get a second opinion from your doctors?</h3><i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer"><p>Absolutely. We encourage patients to seek second opinions. Book a consultation through our appointment system and bring all relevant medical records, scans, and reports from your previous doctors.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quick-actions">
+  <div class="container">
+    <div class="actions-grid">
+      <div class="action-card primary fade-in">
+        <div class="action-icon"><i class="fas fa-calendar-plus"></i></div>
+        <h3>Book Appointment</h3>
+        <p>Schedule your consultation online — fast, easy, and available 24/7</p>
+        <a href="appointment.html" class="btn btn-primary">Book Now</a>
+      </div>
+      <div class="action-card success fade-in delay-1">
+        <div class="action-icon"><i class="fas fa-phone-alt"></i></div>
+        <h3>Call Us</h3>
+        <p>Speak directly with our patient care representatives during working hours</p>
+        <a href="tel:+919876543210" class="btn btn-secondary">Call Now</a>
+      </div>
+      <div class="action-card danger fade-in delay-2">
+        <div class="action-icon"><i class="fas fa-ambulance"></i></div>
+        <h3>Emergency</h3>
+        <p>24/7 emergency services — our team is ready to respond at any moment</p>
+        <a href="tel:+919876543211" class="btn btn-danger">Emergency</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-wrap">
+          <div class="footer-brand">
+            <div class="brand-icon"><i class="fas fa-heartbeat"></i></div>
+            Raj Health Care
+          </div>
+          <div class="footer-tagline">Excellence in Healthcare Since 2004</div>
+        </div>
+        <p class="footer-desc">Providing quality healthcare services with compassion and excellence. Your health and well-being are our highest priority.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="doctors.html">Our Doctors</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Specialties</h4>
+        <ul>
+          <li><a href="services.html">General Medicine</a></li>
+          <li><a href="services.html">Cardiology</a></li>
+          <li><a href="services.html">Neurology</a></li>
+          <li><a href="services.html">Pediatrics</a></li>
+          <li><a href="services.html">Orthopedics</a></li>
+          <li><a href="services.html">Gynecology</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>123 Health Street, Medical District<br>City — 110001</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <span><a href="tel:+919876543210">+91 98765 43210</a><br><a href="tel:+919876543211">+91 98765 43211 (Emergency)</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <span><a href="mailto:info@rajhealthcare.com">info@rajhealthcare.com</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-clock"></i>
+          <span>Mon–Sat: 9AM–6PM<br>Emergency: 24/7</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2024 Raj Health Care. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
