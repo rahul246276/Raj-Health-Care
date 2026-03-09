@@ -3,297 +3,583 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services — Raj Health Care</title>
+  <title>Services — Raj Nursing Bureau</title>
+  <meta name="description" content="Raj Nursing Bureau offers medical equipment on rent and sale, home nursing care, patient attendants, physiotherapy, and hospital nursing staff across all India.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Extra inline style only for the equipment list cards — keeps CSS file untouched -->
+  <style>
+    .equip-section { padding: 100px 0; background: var(--white); }
+    .equip-section.alt { background: var(--off-white); }
+    .equip-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+    }
+    .equip-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .equip-card:hover {
+      border-color: var(--teal-light);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+    .equip-card i {
+      font-size: 2rem;
+      color: var(--teal);
+      margin-bottom: .9rem;
+      display: block;
+    }
+    .equip-card h4 {
+      font-family: var(--font-body);
+      font-size: .92rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.4;
+      margin: 0;
+    }
+    .equip-badge {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .2rem .65rem;
+      border-radius: 50px;
+      margin-top: .5rem;
+    }
+    .badge-rent  { background: var(--mint); color: var(--teal-dark); }
+    .badge-sale  { background: #FFF3E0; color: #E65100; }
+    .badge-both  { background: #EDE7F6; color: #512DA8; }
+    .staff-section { padding: 100px 0; background: var(--off-white); }
+    .staff-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+    .staff-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 2.25rem;
+      border: 1px solid var(--gray-200);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .staff-card::before {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--teal), var(--teal-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .4s ease;
+    }
+    .staff-card:hover { transform: translateY(-6px); border-color: var(--teal-light); box-shadow: var(--shadow-md); }
+    .staff-card:hover::before { transform: scaleX(1); }
+    .staff-icon {
+      width: 64px; height: 64px;
+      background: var(--mint);
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: var(--transition);
+    }
+    .staff-icon i { font-size: 1.5rem; color: var(--teal); transition: var(--transition); }
+    .staff-card:hover .staff-icon { background: var(--teal); }
+    .staff-card:hover .staff-icon i { color: var(--white); }
+    .staff-card h3 { margin-bottom: .6rem; font-size: 1.2rem; }
+    .staff-card p { font-size: .9rem; margin-bottom: 1.25rem; }
+    .staff-card ul { list-style: none; }
+    .staff-card ul li {
+      display: flex; align-items: center; gap: .6rem;
+      font-size: .86rem; color: var(--gray-600); padding: .3rem 0;
+    }
+    .staff-card ul li i { color: var(--teal); font-size: .75rem; flex-shrink: 0; }
+    @media(max-width:1024px) {
+      .equip-grid { grid-template-columns: repeat(3,1fr); }
+      .staff-grid  { grid-template-columns: repeat(2,1fr); }
+    }
+    @media(max-width:768px) {
+      .equip-grid { grid-template-columns: repeat(2,1fr); }
+      .staff-grid  { grid-template-columns: 1fr; }
+    }
+    @media(max-width:480px) {
+      .equip-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
 <body>
+
+<!-- ========== NAVBAR ========== -->
 <nav class="navbar" id="navbar">
   <div class="container">
-    <a href="index.html" class="nav-brand"><div class="brand-icon"><i class="fas fa-heartbeat"></i></div>Raj Health Care</a>
+    <a href="index.html" class="nav-brand">
+      <div class="brand-icon"><i class="fas fa-hand-holding-heart"></i></div>
+      Raj Nursing Bureau
+    </a>
     <div class="nav-menu" id="navMenu">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About Us</a>
-      <a href="services.html" class="nav-link active">Services</a>
-      <a href="doctors.html" class="nav-link">Doctors</a>
-      <a href="appointment.html" class="nav-link">Appointment</a>
-      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="index.html"       class="nav-link">Home</a>
+      <a href="about.html"       class="nav-link">About Us</a>
+      <a href="services.html"    class="nav-link active">Services</a>
+      <a href="doctors.html"     class="nav-link">Our Staff</a>
+      <a href="appointment.html" class="nav-link">Book Service</a>
+      <a href="contact.html"     class="nav-link">Contact</a>
     </div>
-    <a href="appointment.html" class="btn btn-primary nav-cta"><i class="fas fa-calendar-check"></i> Book Now</a>
+    <a href="appointment.html" class="btn btn-primary nav-cta"><i class="fas fa-phone-alt"></i> Book Now</a>
     <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
 
+<!-- ========== PAGE HEADER ========== -->
 <section class="page-header">
   <div class="page-header-pattern"></div>
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Services</span></div>
-    <h1>Our Healthcare Services</h1>
-    <p>Comprehensive medical specialties and diagnostic services for complete patient care</p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Services</span>
+    </div>
+    <h1>Our Services</h1>
+    <p>Medical equipment on rent &amp; sale, trained nursing staff, physiotherapy, and patient attendants — all under one roof</p>
   </div>
 </section>
 
+<!-- ========== MEDICAL EQUIPMENT INTRO ========== -->
 <section class="services-overview">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">Medical Specialties</span>
-      <h2>Expert Care Across Every Specialty</h2>
+      <span class="section-label">Equipment Services</span>
+      <h2>Medical Equipment — Sale &amp; Rent</h2>
       <div class="section-divider"><div class="line"></div><div class="dot"></div><div class="line"></div></div>
-      <p>Our multidisciplinary team of specialists delivers evidence-based care tailored to each patient's unique needs</p>
+      <p>We provide a comprehensive range of medical equipment for home care and hospital use — available on rent or for outright purchase, with home delivery and setup included</p>
     </div>
+    <!-- Overview cards for the main equipment categories -->
     <div class="services-grid">
+
       <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-stethoscope"></i></div>
-        <h3>General Medicine</h3>
-        <p>Comprehensive primary care services for all ages with preventive health checkups and chronic disease management.</p>
-        <ul class="service-features">
-          <li><i class="fas fa-check-circle"></i> Routine health checkups &amp; screenings</li>
-          <li><i class="fas fa-check-circle"></i> Chronic disease management</li>
-          <li><i class="fas fa-check-circle"></i> Vaccination programs</li>
-          <li><i class="fas fa-check-circle"></i> Preventive care counselling</li>
-        </ul>
-        <a href="appointment.html" class="btn btn-primary btn-full">Book Consultation</a>
-      </div>
-      <div class="service-card fade-in delay-1">
-        <div class="service-icon"><i class="fas fa-heart"></i></div>
-        <h3>Cardiology</h3>
-        <p>Advanced cardiac care with cutting-edge diagnostics, interventional procedures, and comprehensive rehabilitation.</p>
-        <ul class="service-features">
-          <li><i class="fas fa-check-circle"></i> ECG &amp; Echocardiography</li>
-          <li><i class="fas fa-check-circle"></i> Stress testing &amp; Holter monitoring</li>
-          <li><i class="fas fa-check-circle"></i> Cardiac catheterization</li>
-          <li><i class="fas fa-check-circle"></i> Open heart surgery</li>
-        </ul>
-        <a href="appointment.html" class="btn btn-primary btn-full">Book Consultation</a>
-      </div>
-      <div class="service-card fade-in delay-2">
-        <div class="service-icon"><i class="fas fa-brain"></i></div>
-        <h3>Neurology</h3>
-        <p>Expert neurological care for brain, spine, and nervous system disorders with advanced imaging and surgical capabilities.</p>
-        <ul class="service-features">
-          <li><i class="fas fa-check-circle"></i> EEG &amp; EMG testing</li>
-          <li><i class="fas fa-check-circle"></i> Stroke treatment &amp; rehabilitation</li>
-          <li><i class="fas fa-check-circle"></i> Epilepsy management</li>
-          <li><i class="fas fa-check-circle"></i> Neurological surgery</li>
-        </ul>
-        <a href="appointment.html" class="btn btn-primary btn-full">Book Consultation</a>
-      </div>
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-baby"></i></div>
-        <h3>Pediatrics</h3>
-        <p>Dedicated and compassionate healthcare for infants, children, and adolescents in a child-friendly environment.</p>
-        <ul class="service-features">
-          <li><i class="fas fa-check-circle"></i> Newborn &amp; neonatal care</li>
-          <li><i class="fas fa-check-circle"></i> Vaccination programs</li>
-          <li><i class="fas fa-check-circle"></i> Growth &amp; development monitoring</li>
-          <li><i class="fas fa-check-circle"></i> Pediatric surgery</li>
-        </ul>
-        <a href="appointment.html" class="btn btn-primary btn-full">Book Consultation</a>
-      </div>
-      <div class="service-card fade-in delay-1">
-        <div class="service-icon"><i class="fas fa-bone"></i></div>
-        <h3>Orthopedics</h3>
-        <p>Complete bone and joint care including advanced surgeries, sports medicine, and comprehensive rehabilitation.</p>
-        <ul class="service-features">
-          <li><i class="fas fa-check-circle"></i> Joint replacement surgery</li>
-          <li><i class="fas fa-check-circle"></i> Fracture treatment &amp; fixation</li>
-          <li><i class="fas fa-check-circle"></i> Sports medicine &amp; injury care</li>
-          <li><i class="fas fa-check-circle"></i> Physiotherapy &amp; rehabilitation</li>
-        </ul>
-        <a href="appointment.html" class="btn btn-primary btn-full">Book Consultation</a>
-      </div>
-      <div class="service-card fade-in delay-2">
-        <div class="service-icon"><i class="fas fa-eye"></i></div>
-        <h3>Ophthalmology</h3>
-        <p>Full-spectrum eye care from routine vision tests to complex surgeries performed by experienced ophthalmologists.</p>
-        <ul class="service-features">
-          <li><i class="fas fa-check-circle"></i> Comprehensive vision testing</li>
-          <li><i class="fas fa-check-circle"></i> Cataract surgery (Phaco)</li>
-          <li><i class="fas fa-check-circle"></i> LASIK &amp; refractive procedures</li>
-          <li><i class="fas fa-check-circle"></i> Glaucoma diagnosis &amp; treatment</li>
-        </ul>
-        <a href="appointment.html" class="btn btn-primary btn-full">Book Consultation</a>
-      </div>
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-tooth"></i></div>
-        <h3>Dentistry</h3>
-        <p>Complete dental care covering preventive, restorative, cosmetic, and surgical dentistry for all ages.</p>
-        <ul class="service-features">
-          <li><i class="fas fa-check-circle"></i> Dental checkups &amp; cleaning</li>
-          <li><i class="fas fa-check-circle"></i> Root canal treatment</li>
-          <li><i class="fas fa-check-circle"></i> Orthodontics &amp; braces</li>
-          <li><i class="fas fa-check-circle"></i> Cosmetic &amp; implant dentistry</li>
-        </ul>
-        <a href="appointment.html" class="btn btn-primary btn-full">Book Consultation</a>
-      </div>
-      <div class="service-card fade-in delay-1">
-        <div class="service-icon"><i class="fas fa-venus"></i></div>
-        <h3>Gynecology</h3>
-        <p>Comprehensive women's healthcare from adolescence through menopause, including obstetrics and fertility care.</p>
-        <ul class="service-features">
-          <li><i class="fas fa-check-circle"></i> Antenatal &amp; postnatal care</li>
-          <li><i class="fas fa-check-circle"></i> High-risk pregnancy management</li>
-          <li><i class="fas fa-check-circle"></i> Infertility treatment</li>
-          <li><i class="fas fa-check-circle"></i> Gynecological surgery (laparoscopic)</li>
-        </ul>
-        <a href="appointment.html" class="btn btn-primary btn-full">Book Consultation</a>
-      </div>
-      <div class="service-card fade-in delay-2">
         <div class="service-icon"><i class="fas fa-lungs"></i></div>
-        <h3>Pulmonology</h3>
-        <p>Specialised care for respiratory diseases and lung disorders with advanced pulmonary function testing.</p>
+        <h3>Respiratory &amp; Breathing Equipment</h3>
+        <p>Critical breathing support equipment for patients requiring respiratory assistance at home or during recovery.</p>
         <ul class="service-features">
-          <li><i class="fas fa-check-circle"></i> Asthma &amp; allergy treatment</li>
-          <li><i class="fas fa-check-circle"></i> COPD management</li>
-          <li><i class="fas fa-check-circle"></i> Sleep disorder diagnosis &amp; treatment</li>
-          <li><i class="fas fa-check-circle"></i> Pulmonary rehabilitation</li>
+          <li><i class="fas fa-check-circle"></i> Ventilators</li>
+          <li><i class="fas fa-check-circle"></i> CPAP / BiPAP Machines</li>
+          <li><i class="fas fa-check-circle"></i> Oxygen Cylinders</li>
+          <li><i class="fas fa-check-circle"></i> Oxygen Concentrators</li>
+          <li><i class="fas fa-check-circle"></i> Nebulizers</li>
+          <li><i class="fas fa-check-circle"></i> Suction Machines</li>
         </ul>
-        <a href="appointment.html" class="btn btn-primary btn-full">Book Consultation</a>
+        <a href="appointment.html" class="btn btn-primary btn-full">Enquire Now</a>
       </div>
+
+      <div class="service-card fade-in delay-1">
+        <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+        <h3>Monitoring &amp; Diagnostic Equipment</h3>
+        <p>Accurate monitoring devices to track vital signs, oxygen levels, and cardiac activity at home.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check-circle"></i> Multipara Monitor</li>
+          <li><i class="fas fa-check-circle"></i> Pulse Oximeters</li>
+          <li><i class="fas fa-check-circle"></i> DVT Pump</li>
+        </ul>
+        <a href="appointment.html" class="btn btn-primary btn-full">Enquire Now</a>
+      </div>
+
+      <div class="service-card fade-in delay-2">
+        <div class="service-icon"><i class="fas fa-bed"></i></div>
+        <h3>Hospital Beds &amp; Furniture</h3>
+        <p>A wide range of hospital-grade beds and patient furniture for comfortable, safe home care recovery.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check-circle"></i> Hydraulic Hospital Beds</li>
+          <li><i class="fas fa-check-circle"></i> Alfa Beds</li>
+          <li><i class="fas fa-check-circle"></i> Patient Care Hospital Beds</li>
+          <li><i class="fas fa-check-circle"></i> Over Bed Tables</li>
+          <li><i class="fas fa-check-circle"></i> Motorised / Manual Recliners</li>
+          <li><i class="fas fa-check-circle"></i> Recliner Mattresses</li>
+        </ul>
+        <a href="appointment.html" class="btn btn-primary btn-full">Enquire Now</a>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon"><i class="fas fa-wheelchair"></i></div>
+        <h3>Mobility &amp; Rehabilitation Equipment</h3>
+        <p>Equipment to help patients regain independence, improve mobility, and move safely during recovery.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check-circle"></i> Wheelchairs (Standard &amp; Motorised)</li>
+          <li><i class="fas fa-check-circle"></i> Walkers &amp; Walking Aids</li>
+        </ul>
+        <a href="appointment.html" class="btn btn-primary btn-full">Enquire Now</a>
+      </div>
+
+      <div class="service-card fade-in delay-1">
+        <div class="service-icon"><i class="fas fa-box-open"></i></div>
+        <h3>Medical Supplies</h3>
+        <p>Essential everyday medical consumables and hygiene supplies for patient comfort and clinical care at home.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check-circle"></i> Adult Diapers</li>
+          <li><i class="fas fa-check-circle"></i> Surgical Cotton</li>
+          <li><i class="fas fa-check-circle"></i> Disposable Gloves</li>
+        </ul>
+        <a href="appointment.html" class="btn btn-primary btn-full">Enquire Now</a>
+      </div>
+
+      <div class="service-card fade-in delay-2">
+        <div class="service-icon"><i class="fas fa-truck"></i></div>
+        <h3>Home Delivery &amp; Setup</h3>
+        <p>All equipment is delivered to your home, installed, and demonstrated by our trained technicians. Pickup also arranged on rental return.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check-circle"></i> Same-day delivery available</li>
+          <li><i class="fas fa-check-circle"></i> Free installation &amp; demo</li>
+          <li><i class="fas fa-check-circle"></i> Flexible rental periods</li>
+          <li><i class="fas fa-check-circle"></i> 24-hour technical support</li>
+        </ul>
+        <a href="appointment.html" class="btn btn-primary btn-full">Enquire Now</a>
+      </div>
+
     </div>
   </div>
 </section>
 
+<!-- ========== COMPLETE EQUIPMENT LIST ========== -->
+<section class="equip-section alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Complete List</span>
+      <h2>All Available Equipment</h2>
+      <div class="section-divider"><div class="line"></div><div class="dot"></div><div class="line"></div></div>
+      <p>Every item listed below is available on rent, for sale, or both — call us to check availability and pricing</p>
+    </div>
+    <div class="equip-grid">
+
+      <div class="equip-card fade-in">
+        <i class="fas fa-wind"></i>
+        <h4>Ventilators</h4>
+        <span class="equip-badge badge-both">Rent &amp; Sale</span>
+      </div>
+
+      <div class="equip-card fade-in delay-1">
+        <i class="fas fa-lungs"></i>
+        <h4>CPAP / BiPAP Machines</h4>
+        <span class="equip-badge badge-both">Rent &amp; Sale</span>
+      </div>
+
+      <div class="equip-card fade-in delay-2">
+        <i class="fas fa-heartbeat"></i>
+        <h4>Multipara Monitor</h4>
+        <span class="equip-badge badge-both">Rent &amp; Sale</span>
+      </div>
+
+      <div class="equip-card fade-in delay-3">
+        <i class="fas fa-tint"></i>
+        <h4>DVT Pump</h4>
+        <span class="equip-badge badge-both">Rent &amp; Sale</span>
+      </div>
+
+      <div class="equip-card fade-in">
+        <i class="fas fa-bed"></i>
+        <h4>Hydraulic Hospital Beds</h4>
+        <span class="equip-badge badge-both">Rent &amp; Sale</span>
+      </div>
+
+      <div class="equip-card fade-in delay-1">
+        <i class="fas fa-procedures"></i>
+        <h4>Alfa Beds</h4>
+        <span class="equip-badge badge-both">Rent &amp; Sale</span>
+      </div>
+
+      <div class="equip-card fade-in delay-2">
+        <i class="fas fa-wheelchair"></i>
+        <h4>Wheelchairs</h4>
+        <span class="equip-badge badge-both">Rent &amp; Sale</span>
+      </div>
+
+      <div class="equip-card fade-in delay-3">
+        <i class="fas fa-pump-soap"></i>
+        <h4>Oxygen Cylinders</h4>
+        <span class="equip-badge badge-both">Rent &amp; Sale</span>
+      </div>
+
+      <div class="equip-card fade-in">
+        <i class="fas fa-walking"></i>
+        <h4>Walkers</h4>
+        <span class="equip-badge badge-both">Rent &amp; Sale</span>
+      </div>
+
+      <div class="equip-card fade-in delay-1">
+        <i class="fas fa-table"></i>
+        <h4>Over Bed Tables</h4>
+        <span class="equip-badge badge-both">Rent &amp; Sale</span>
+      </div>
+
+      <div class="equip-card fade-in delay-2">
+        <i class="fas fa-hospital-alt"></i>
+        <h4>Patient Care Hospital Beds</h4>
+        <span class="equip-badge badge-both">Rent &amp; Sale</span>
+      </div>
+
+      <div class="equip-card fade-in delay-3">
+        <i class="fas fa-satellite-dish"></i>
+        <h4>Pulse Oximeters</h4>
+        <span class="equip-badge badge-both">Rent &amp; Sale</span>
+      </div>
+
+      <div class="equip-card fade-in">
+        <i class="fas fa-air-freshener"></i>
+        <h4>Oxygen Concentrators</h4>
+        <span class="equip-badge badge-both">Rent &amp; Sale</span>
+      </div>
+
+      <div class="equip-card fade-in delay-1">
+        <i class="fas fa-filter"></i>
+        <h4>Suction Machines</h4>
+        <span class="equip-badge badge-both">Rent &amp; Sale</span>
+      </div>
+
+      <div class="equip-card fade-in delay-2">
+        <i class="fas fa-chair"></i>
+        <h4>Motorised / Manual Recliners</h4>
+        <span class="equip-badge badge-both">Rent &amp; Sale</span>
+      </div>
+
+      <div class="equip-card fade-in delay-3">
+        <i class="fas fa-cloud-meatball"></i>
+        <h4>Nebulizers</h4>
+        <span class="equip-badge badge-both">Rent &amp; Sale</span>
+      </div>
+
+      <div class="equip-card fade-in">
+        <i class="fas fa-layer-group"></i>
+        <h4>Recliner Mattress</h4>
+        <span class="equip-badge badge-both">Rent &amp; Sale</span>
+      </div>
+
+      <div class="equip-card fade-in delay-1">
+        <i class="fas fa-box"></i>
+        <h4>Medical Supplies</h4>
+        <span class="equip-badge badge-sale">Available</span>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:3rem;">
+      <p style="font-size:.95rem;color:var(--gray-600);margin-bottom:1.5rem;">Not sure what you need? Call us and our team will guide you to the right equipment for your patient's condition.</p>
+      <a href="appointment.html" class="btn btn-primary btn-large">
+        <i class="fas fa-phone-alt"></i> Enquire About Equipment
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HEALTHCARE STAFF SERVICES ========== -->
+<section class="staff-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Staff Services</span>
+      <h2>Healthcare Staff We Provide</h2>
+      <div class="section-divider"><div class="line"></div><div class="dot"></div><div class="line"></div></div>
+      <p>All our healthcare professionals are trained, certified, and background-verified before being placed with any patient or family</p>
+    </div>
+    <div class="staff-grid">
+
+      <div class="staff-card fade-in">
+        <div class="staff-icon"><i class="fas fa-user-nurse"></i></div>
+        <h3>Male / Female Staff Nurse</h3>
+        <p>Qualified nurses for private duty care at home or hospital — providing clinical nursing, medication management, wound care, and patient monitoring.</p>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> GNM / B.Sc Nursing qualified</li>
+          <li><i class="fas fa-check-circle"></i> Registered with nursing council</li>
+          <li><i class="fas fa-check-circle"></i> Day &amp; night shift available</li>
+          <li><i class="fas fa-check-circle"></i> ICU experience staff available</li>
+        </ul>
+        <a href="appointment.html" class="btn btn-primary btn-full" style="margin-top:1.5rem">Book a Nurse</a>
+      </div>
+
+      <div class="staff-card fade-in delay-1">
+        <div class="staff-icon"><i class="fas fa-home"></i></div>
+        <h3>Home Nursing Care</h3>
+        <p>Comprehensive in-home nursing for post-surgical recovery, elderly care, chronic illness management, and critical illness monitoring.</p>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Post-operative care</li>
+          <li><i class="fas fa-check-circle"></i> Elderly &amp; palliative care</li>
+          <li><i class="fas fa-check-circle"></i> IV &amp; tube feeding management</li>
+          <li><i class="fas fa-check-circle"></i> Wound dressing &amp; catheter care</li>
+        </ul>
+        <a href="appointment.html" class="btn btn-primary btn-full" style="margin-top:1.5rem">Book Home Care</a>
+      </div>
+
+      <div class="staff-card fade-in delay-2">
+        <div class="staff-icon"><i class="fas fa-hospital"></i></div>
+        <h3>Hospital Nursing Staff</h3>
+        <p>Trained nursing staff provided to hospitals, nursing homes, and clinics on short-term and long-term placement for all wards and specialties.</p>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> General ward nurses</li>
+          <li><i class="fas fa-check-circle"></i> ICU / CCU trained nurses</li>
+          <li><i class="fas fa-check-circle"></i> Operation theatre assistants</li>
+          <li><i class="fas fa-check-circle"></i> Short-term &amp; long-term placement</li>
+        </ul>
+        <a href="appointment.html" class="btn btn-primary btn-full" style="margin-top:1.5rem">Staff Enquiry</a>
+      </div>
+
+      <div class="staff-card fade-in">
+        <div class="staff-icon"><i class="fas fa-hands-helping"></i></div>
+        <h3>Nursing Home Aayas / Nursing Aids</h3>
+        <p>Trained nursing aides and Aayas for nursing homes, hospitals, and home settings — providing personal hygiene, feeding, and basic patient care support.</p>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Personal hygiene &amp; bathing assistance</li>
+          <li><i class="fas fa-check-circle"></i> Feeding &amp; nutrition support</li>
+          <li><i class="fas fa-check-circle"></i> Basic patient care tasks</li>
+          <li><i class="fas fa-check-circle"></i> Nursing home &amp; home placement</li>
+        </ul>
+        <a href="appointment.html" class="btn btn-primary btn-full" style="margin-top:1.5rem">Book an Aaya</a>
+      </div>
+
+      <div class="staff-card fade-in delay-1">
+        <div class="staff-icon"><i class="fas fa-running"></i></div>
+        <h3>Physiotherapists</h3>
+        <p>Certified physiotherapists visiting your home or hospital for rehabilitation, stroke recovery, orthopaedic conditions, and mobility improvement programs.</p>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> BPT / MPT certified</li>
+          <li><i class="fas fa-check-circle"></i> Stroke &amp; neuro rehabilitation</li>
+          <li><i class="fas fa-check-circle"></i> Post-surgery physiotherapy</li>
+          <li><i class="fas fa-check-circle"></i> Orthopaedic &amp; spine care</li>
+        </ul>
+        <a href="appointment.html" class="btn btn-primary btn-full" style="margin-top:1.5rem">Book Physiotherapy</a>
+      </div>
+
+      <div class="staff-card fade-in delay-2">
+        <div class="staff-icon"><i class="fas fa-procedures"></i></div>
+        <h3>Patient Attendants</h3>
+        <p>Compassionate male and female attendants for round-the-clock patient companionship, mobility assistance, and personal care at home or in hospital.</p>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> 12-hour &amp; 24-hour duty</li>
+          <li><i class="fas fa-check-circle"></i> Mobility &amp; transfer support</li>
+          <li><i class="fas fa-check-circle"></i> Medication reminders</li>
+          <li><i class="fas fa-check-circle"></i> Hospital &amp; home placement</li>
+        </ul>
+        <a href="appointment.html" class="btn btn-primary btn-full" style="margin-top:1.5rem">Book an Attendant</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== DIAGNOSTIC SECTION — reused for service area ========== -->
 <section class="diagnostic-services">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">Diagnostics</span>
-      <h2>Advanced Diagnostic Services</h2>
+      <span class="section-label">How It Works</span>
+      <h2>Simple Process, Immediate Care</h2>
       <div class="section-divider"><div class="line"></div><div class="dot"></div><div class="line"></div></div>
-      <p>State-of-the-art diagnostic facilities for accurate, timely, and comprehensive diagnosis</p>
+      <p>Getting the care or equipment you need from Raj Nursing Bureau is quick and straightforward</p>
     </div>
     <div class="diagnostic-grid">
       <div class="diagnostic-card fade-in">
-        <div class="diagnostic-icon"><i class="fas fa-x-ray"></i></div>
-        <h3>Radiology &amp; Imaging</h3>
-        <p>Advanced imaging including digital X-ray, 3T MRI, 128-slice CT scan, and colour Doppler ultrasound.</p>
+        <div class="diagnostic-icon"><i class="fas fa-phone-alt"></i></div>
+        <h3>Call or Book Online</h3>
+        <p>Contact us by phone or fill out our online booking form with your requirements — any time, day or night.</p>
       </div>
       <div class="diagnostic-card fade-in delay-1">
-        <div class="diagnostic-icon"><i class="fas fa-vial"></i></div>
-        <h3>Clinical Laboratory</h3>
-        <p>Comprehensive laboratory testing with automated analysers delivering accurate, NABL-certified results.</p>
+        <div class="diagnostic-icon"><i class="fas fa-clipboard-check"></i></div>
+        <h3>Assessment &amp; Matching</h3>
+        <p>Our team assesses your needs and matches you with the right equipment or the most suitable trained staff member.</p>
       </div>
       <div class="diagnostic-card fade-in delay-2">
-        <div class="diagnostic-icon"><i class="fas fa-dna"></i></div>
-        <h3>Pathology</h3>
-        <p>Detailed histopathological and cytological analysis for precise disease diagnosis and monitoring.</p>
+        <div class="diagnostic-icon"><i class="fas fa-truck"></i></div>
+        <h3>Delivery or Deployment</h3>
+        <p>Equipment is delivered and installed at your location, or our healthcare staff arrives at your home or hospital promptly.</p>
       </div>
       <div class="diagnostic-card fade-in delay-3">
-        <div class="diagnostic-icon"><i class="fas fa-heartbeat"></i></div>
-        <h3>Cardiac Diagnostics</h3>
-        <p>Specialised cardiac testing including 12-lead ECG, 2D Echo, Treadmill Test, and Holter monitoring.</p>
+        <div class="diagnostic-icon"><i class="fas fa-heart"></i></div>
+        <h3>Ongoing Support</h3>
+        <p>We remain available 24 hours for any concerns, replacements, or additional requirements throughout your care journey.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ========== EMERGENCY SERVICES ========== -->
 <section class="emergency-services">
   <div class="container">
     <div class="emergency-content">
       <div class="emergency-text animate-fade-up">
         <span class="section-label" style="background:rgba(255,255,255,.15);color:rgba(255,255,255,.9)">Always Available</span>
-        <h2>24/7 Emergency Services</h2>
-        <p>Our dedicated emergency department is staffed round the clock with experienced emergency physicians, nurses, and support staff — ready to deliver life-saving care at any moment.</p>
+        <h2>24-Hour Service — All India</h2>
+        <p>Raj Nursing Bureau operates around the clock. Whether you need a nurse urgently in the middle of the night or a medical equipment delivery on a Sunday — we are always here for you.</p>
         <ul class="emergency-features">
-          <li><i class="fas fa-ambulance"></i> Fully equipped ambulance services</li>
-          <li><i class="fas fa-user-md"></i> Dedicated emergency physicians</li>
-          <li><i class="fas fa-procedures"></i> Trauma &amp; resuscitation unit</li>
-          <li><i class="fas fa-phone-alt"></i> 24/7 helpline &amp; medical advice</li>
+          <li><i class="fas fa-user-nurse"></i> Immediate nurse deployment</li>
+          <li><i class="fas fa-bed"></i> Same-day equipment delivery</li>
+          <li><i class="fas fa-globe-asia"></i> All India service coverage</li>
+          <li><i class="fas fa-phone-alt"></i> 24-hour helpline always answered</li>
         </ul>
         <div class="emergency-contact">
-          <h3>Emergency Helpline</h3>
-          <div class="emergency-number">+91 98765 43211</div>
+          <h3>24-Hour Helpline</h3>
+          <div class="emergency-number">+91 XXXXX XXXXX</div>
         </div>
       </div>
       <div class="emergency-visual">
-        <i class="fas fa-ambulance"></i>
+        <i class="fas fa-hand-holding-heart"></i>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ========== CTA ========== -->
 <section class="cta">
   <div class="container">
-    <h2>Start Your Health Journey Today</h2>
-    <p>Our specialists are ready to provide you with the expert care you deserve. Book your consultation now.</p>
+    <h2>Ready to Book a Service?</h2>
+    <p>Tell us what you need and we will arrange the right care or equipment for your patient immediately.</p>
     <div class="cta-buttons">
-      <a href="appointment.html" class="btn btn-white btn-large"><i class="fas fa-calendar-check"></i> Book Appointment</a>
-      <a href="contact.html" class="btn btn-outline-white btn-large"><i class="fas fa-phone"></i> Call Us</a>
+      <a href="appointment.html" class="btn btn-white btn-large"><i class="fas fa-calendar-check"></i> Book Now</a>
+      <a href="contact.html" class="btn btn-outline-white btn-large"><i class="fas fa-envelope"></i> Send Enquiry</a>
     </div>
   </div>
 </section>
+
 <!-- ========== FOOTER ========== -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
         <div class="footer-brand-wrap">
-          <div class="footer-brand">
-            <div class="brand-icon"><i class="fas fa-heartbeat"></i></div>
-            Raj Health Care
-          </div>
-          <div class="footer-tagline">Excellence in Healthcare Since 2004</div>
+          <div class="footer-brand"><div class="brand-icon"><i class="fas fa-hand-holding-heart"></i></div>Raj Nursing Bureau</div>
+          <div class="footer-tagline">We deliver care from our hearts to you.</div>
         </div>
-        <p class="footer-desc">Providing quality healthcare services with compassion and excellence. Your health and well-being are our highest priority.</p>
+        <p class="footer-desc">Providing trained nursing staff and medical equipment on rent &amp; sale — 24 hours, all across India.</p>
         <div class="social-links">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Our Services</a></li>
-          <li><a href="doctors.html">Our Doctors</a></li>
-          <li><a href="appointment.html">Book Appointment</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Specialties</h4>
-        <ul>
-          <li><a href="services.html">General Medicine</a></li>
-          <li><a href="services.html">Cardiology</a></li>
-          <li><a href="services.html">Neurology</a></li>
-          <li><a href="services.html">Pediatrics</a></li>
-          <li><a href="services.html">Orthopedics</a></li>
-          <li><a href="services.html">Gynecology</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact Info</h4>
-        <div class="footer-contact-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <span>123 Health Street, Medical District<br>City — 110001</span>
-        </div>
-        <div class="footer-contact-item">
-          <i class="fas fa-phone-alt"></i>
-          <span><a href="tel:+919876543210">+91 98765 43210</a><br><a href="tel:+919876543211">+91 98765 43211 (Emergency)</a></span>
-        </div>
-        <div class="footer-contact-item">
-          <i class="fas fa-envelope"></i>
-          <span><a href="mailto:info@rajhealthcare.com">info@rajhealthcare.com</a></span>
-        </div>
-        <div class="footer-contact-item">
-          <i class="fas fa-clock"></i>
-          <span>Mon–Sat: 9AM–6PM<br>Emergency: 24/7</span>
-        </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="doctors.html">Our Staff</a></li>
+        <li><a href="appointment.html">Book a Service</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Our Services</h4><ul>
+        <li><a href="services.html">Home Nursing Care</a></li>
+        <li><a href="services.html">Patient Attendants</a></li>
+        <li><a href="services.html">Physiotherapy</a></li>
+        <li><a href="services.html">Equipment on Rent</a></li>
+        <li><a href="services.html">Hospital Staff</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact Info</h4>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Gijor, Sector 53, Near C.N.G Petrol Pump<br>Noida (U.P)</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span><a href="tel:+911234567890">+91 XXXXX XXXXX</a></span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span><a href="mailto:rajnursingbureau@gmail.com">rajnursingbureau@gmail.com</a></span></div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2024 Raj Health Care. All rights reserved.</span>
-      <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Sitemap</a>
-      </div>
+      <span>&copy; 2024 Raj Nursing Bureau. All rights reserved.</span>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
     </div>
   </div>
 </footer>

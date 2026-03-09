@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Doctors — Raj Health Care</title>
+  <title>Our Staff — Raj Nursing Bureau</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,18 +11,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
 <nav class="navbar" id="navbar">
   <div class="container">
-    <a href="index.html" class="nav-brand"><div class="brand-icon"><i class="fas fa-heartbeat"></i></div>Raj Health Care</a>
+    <a href="index.html" class="nav-brand">
+      <div class="brand-icon"><i class="fas fa-hand-holding-heart"></i></div>Raj Nursing Bureau
+    </a>
     <div class="nav-menu" id="navMenu">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About Us</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="doctors.html" class="nav-link active">Doctors</a>
-      <a href="appointment.html" class="nav-link">Appointment</a>
-      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="index.html"       class="nav-link">Home</a>
+      <a href="about.html"       class="nav-link">About Us</a>
+      <a href="services.html"    class="nav-link">Services</a>
+      <a href="doctors.html"     class="nav-link active">Our Staff</a>
+      <a href="appointment.html" class="nav-link">Book Service</a>
+      <a href="contact.html"     class="nav-link">Contact</a>
     </div>
-    <a href="appointment.html" class="btn btn-primary nav-cta"><i class="fas fa-calendar-check"></i> Book Now</a>
+    <a href="appointment.html" class="btn btn-primary nav-cta"><i class="fas fa-phone-alt"></i> Book Now</a>
     <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
@@ -30,188 +33,236 @@
 <section class="page-header">
   <div class="page-header-pattern"></div>
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Doctors</span></div>
-    <h1>Our Expert Medical Team</h1>
-    <p>Meet the dedicated specialists who bring expertise, experience, and compassion to every patient</p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Our Staff</span>
+    </div>
+    <h1>Our Healthcare Staff</h1>
+    <p>Trained, verified, and compassionate — meet the professionals we deploy to care for your family</p>
   </div>
 </section>
 
+<!-- ========== FILTER ========== -->
 <section class="doctors-filter">
   <div class="container">
     <div class="filter-buttons">
-      <button class="filter-btn active" data-filter="all">All Doctors</button>
-      <button class="filter-btn" data-filter="cardiology">Cardiology</button>
-      <button class="filter-btn" data-filter="neurology">Neurology</button>
-      <button class="filter-btn" data-filter="pediatrics">Pediatrics</button>
-      <button class="filter-btn" data-filter="orthopedics">Orthopedics</button>
-      <button class="filter-btn" data-filter="gynecology">Gynecology</button>
+      <button class="filter-btn active" data-filter="all">All Staff</button>
+      <button class="filter-btn" data-filter="nurse">Staff Nurses</button>
+      <button class="filter-btn" data-filter="attendant">Patient Attendants</button>
+      <button class="filter-btn" data-filter="physio">Physiotherapists</button>
+      <button class="filter-btn" data-filter="aaya">Nursing Aaya</button>
     </div>
   </div>
 </section>
 
+<!-- ========== STAFF GRID ========== -->
 <section class="doctors-section">
   <div class="container">
-    <div class="doctors-grid">
+    <div class="doctors-grid" style="grid-template-columns:repeat(3,1fr)">
 
-      <div class="doctor-card fade-in" data-category="cardiology">
+      <div class="doctor-card fade-in" data-category="nurse">
         <div class="doctor-img">
-          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&auto=format&fit=crop&q=80" alt="Dr. Rajesh Kumar">
-          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&auto=format&fit=crop&q=80" alt="Female Staff Nurse">
+          <div class="doctor-overlay">
+            <div class="doctor-overlay-links">
+              <a href="appointment.html"><i class="fas fa-calendar-check"></i></a>
+              <a href="contact.html"><i class="fas fa-phone-alt"></i></a>
+            </div>
+          </div>
         </div>
         <div class="doctor-info">
-          <h3>Dr. Rajesh Kumar</h3>
-          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Senior Cardiologist</p>
-          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 15+ Years Experience</p>
+          <h3>Female Staff Nurse</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Private Duty / Home Care</p>
+          <p class="doctor-exp"><i class="fas fa-certificate"></i> GNM / B.Sc Nursing Qualified</p>
           <div class="doctor-details">
-            <p><strong>Education:</strong> MBBS, MD (Cardiology), DM</p>
-            <p><strong>Specialisation:</strong> Interventional Cardiology</p>
-            <p><strong>Languages:</strong> English, Hindi, Punjabi</p>
+            <p><strong>Qualification:</strong> GNM / B.Sc Nursing</p>
+            <p><strong>Available for:</strong> Home duty, Hospital duty</p>
+            <p><strong>Shift:</strong> 12-hour / 24-hour duty</p>
           </div>
-          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book This Staff</a>
         </div>
       </div>
 
-      <div class="doctor-card fade-in delay-1" data-category="pediatrics">
+      <div class="doctor-card fade-in delay-1" data-category="nurse">
         <div class="doctor-img">
-          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&auto=format&fit=crop&q=80" alt="Dr. Priya Sharma">
-          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=500&auto=format&fit=crop&q=80" alt="Male Staff Nurse">
+          <div class="doctor-overlay">
+            <div class="doctor-overlay-links">
+              <a href="appointment.html"><i class="fas fa-calendar-check"></i></a>
+              <a href="contact.html"><i class="fas fa-phone-alt"></i></a>
+            </div>
+          </div>
         </div>
         <div class="doctor-info">
-          <h3>Dr. Priya Sharma</h3>
-          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Pediatric Specialist</p>
-          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 12+ Years Experience</p>
+          <h3>Male Staff Nurse</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Private Duty / Hospital Duty</p>
+          <p class="doctor-exp"><i class="fas fa-certificate"></i> GNM / B.Sc Nursing Qualified</p>
           <div class="doctor-details">
-            <p><strong>Education:</strong> MBBS, MD (Pediatrics)</p>
-            <p><strong>Specialisation:</strong> Neonatology</p>
-            <p><strong>Languages:</strong> English, Hindi, Marathi</p>
+            <p><strong>Qualification:</strong> GNM / B.Sc Nursing</p>
+            <p><strong>Available for:</strong> Home duty, Hospital duty</p>
+            <p><strong>Shift:</strong> 12-hour / 24-hour duty</p>
           </div>
-          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book This Staff</a>
         </div>
       </div>
 
-      <div class="doctor-card fade-in delay-2" data-category="neurology">
+      <div class="doctor-card fade-in delay-2" data-category="nurse">
         <div class="doctor-img">
-          <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=500&auto=format&fit=crop&q=80" alt="Dr. Amit Patel">
-          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+          <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=500&auto=format&fit=crop&q=80" alt="ICU Trained Nurse">
+          <div class="doctor-overlay">
+            <div class="doctor-overlay-links">
+              <a href="appointment.html"><i class="fas fa-calendar-check"></i></a>
+              <a href="contact.html"><i class="fas fa-phone-alt"></i></a>
+            </div>
+          </div>
         </div>
         <div class="doctor-info">
-          <h3>Dr. Amit Patel</h3>
-          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Neurosurgeon</p>
-          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 18+ Years Experience</p>
+          <h3>ICU / Hospital Nursing Staff</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Hospital / Nursing Home</p>
+          <p class="doctor-exp"><i class="fas fa-certificate"></i> ICU / Critical Care Trained</p>
           <div class="doctor-details">
-            <p><strong>Education:</strong> MBBS, MS (Neurosurgery), MCh</p>
-            <p><strong>Specialisation:</strong> Brain &amp; Spine Surgery</p>
-            <p><strong>Languages:</strong> English, Hindi, Gujarati</p>
+            <p><strong>Qualification:</strong> B.Sc Nursing + ICU Training</p>
+            <p><strong>Available for:</strong> Hospitals, Nursing Homes</p>
+            <p><strong>Shift:</strong> Rotational shifts available</p>
           </div>
-          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book This Staff</a>
         </div>
       </div>
 
-      <div class="doctor-card fade-in" data-category="gynecology">
+      <div class="doctor-card fade-in" data-category="physio">
         <div class="doctor-img">
-          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=500&auto=format&fit=crop&q=80" alt="Dr. Sneha Reddy">
-          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=80" alt="Physiotherapist">
+          <div class="doctor-overlay">
+            <div class="doctor-overlay-links">
+              <a href="appointment.html"><i class="fas fa-calendar-check"></i></a>
+              <a href="contact.html"><i class="fas fa-phone-alt"></i></a>
+            </div>
+          </div>
         </div>
         <div class="doctor-info">
-          <h3>Dr. Sneha Reddy</h3>
-          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Gynecologist</p>
-          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 10+ Years Experience</p>
+          <h3>Physiotherapist</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Home Physiotherapy</p>
+          <p class="doctor-exp"><i class="fas fa-certificate"></i> BPT / MPT Certified</p>
           <div class="doctor-details">
-            <p><strong>Education:</strong> MBBS, MS (OB-GYN)</p>
-            <p><strong>Specialisation:</strong> High-Risk Pregnancy</p>
-            <p><strong>Languages:</strong> English, Hindi, Telugu</p>
+            <p><strong>Qualification:</strong> BPT / MPT</p>
+            <p><strong>Available for:</strong> Home visits, Hospitals</p>
+            <p><strong>Speciality:</strong> Neuro, Ortho, Post-surgical</p>
           </div>
-          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book This Staff</a>
         </div>
       </div>
 
-      <div class="doctor-card fade-in delay-1" data-category="orthopedics">
+      <div class="doctor-card fade-in delay-1" data-category="attendant">
         <div class="doctor-img">
-          <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=500&auto=format&fit=crop&q=80" alt="Dr. Vikram Singh">
-          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&auto=format&fit=crop&q=80" alt="Patient Attendant">
+          <div class="doctor-overlay">
+            <div class="doctor-overlay-links">
+              <a href="appointment.html"><i class="fas fa-calendar-check"></i></a>
+              <a href="contact.html"><i class="fas fa-phone-alt"></i></a>
+            </div>
+          </div>
         </div>
         <div class="doctor-info">
-          <h3>Dr. Vikram Singh</h3>
-          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Orthopedic Surgeon</p>
-          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 14+ Years Experience</p>
+          <h3>Patient Attendant (Male)</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Home &amp; Hospital Duty</p>
+          <p class="doctor-exp"><i class="fas fa-certificate"></i> Trained &amp; Background Verified</p>
           <div class="doctor-details">
-            <p><strong>Education:</strong> MBBS, MS (Orthopedics)</p>
-            <p><strong>Specialisation:</strong> Joint Replacement</p>
-            <p><strong>Languages:</strong> English, Hindi, Punjabi</p>
+            <p><strong>Available for:</strong> Home duty, Hospital duty</p>
+            <p><strong>Duties:</strong> Mobility, hygiene, feeding, care</p>
+            <p><strong>Shift:</strong> 12-hour / 24-hour duty</p>
           </div>
-          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book This Staff</a>
         </div>
       </div>
 
-      <div class="doctor-card fade-in delay-2" data-category="cardiology">
+      <div class="doctor-card fade-in delay-2" data-category="attendant">
         <div class="doctor-img">
-          <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?w=500&auto=format&fit=crop&q=80" alt="Dr. Anjali Gupta">
-          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+          <img src="https://images.unsplash.com/photo-1643297654416-05795d62e39c?w=500&auto=format&fit=crop&q=80" alt="Female Patient Attendant">
+          <div class="doctor-overlay">
+            <div class="doctor-overlay-links">
+              <a href="appointment.html"><i class="fas fa-calendar-check"></i></a>
+              <a href="contact.html"><i class="fas fa-phone-alt"></i></a>
+            </div>
+          </div>
         </div>
         <div class="doctor-info">
-          <h3>Dr. Anjali Gupta</h3>
-          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Cardiac Surgeon</p>
-          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 20+ Years Experience</p>
+          <h3>Patient Attendant (Female)</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Home &amp; Hospital Duty</p>
+          <p class="doctor-exp"><i class="fas fa-certificate"></i> Trained &amp; Background Verified</p>
           <div class="doctor-details">
-            <p><strong>Education:</strong> MBBS, MS (Cardiothoracic)</p>
-            <p><strong>Specialisation:</strong> Open Heart Surgery</p>
-            <p><strong>Languages:</strong> English, Hindi, Bengali</p>
+            <p><strong>Available for:</strong> Home duty, Hospital duty</p>
+            <p><strong>Duties:</strong> Personal hygiene, feeding, care</p>
+            <p><strong>Shift:</strong> 12-hour / 24-hour duty</p>
           </div>
-          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book This Staff</a>
         </div>
       </div>
 
-      <div class="doctor-card fade-in" data-category="neurology">
+      <div class="doctor-card fade-in" data-category="aaya">
         <div class="doctor-img">
-          <img src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?w=500&auto=format&fit=crop&q=80" alt="Dr. Rahul Mehra">
-          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+          <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=500&auto=format&fit=crop&q=80" alt="Nursing Home Aaya">
+          <div class="doctor-overlay">
+            <div class="doctor-overlay-links">
+              <a href="appointment.html"><i class="fas fa-calendar-check"></i></a>
+              <a href="contact.html"><i class="fas fa-phone-alt"></i></a>
+            </div>
+          </div>
         </div>
         <div class="doctor-info">
-          <h3>Dr. Rahul Mehra</h3>
-          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Neurologist</p>
-          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 11+ Years Experience</p>
+          <h3>Nursing Home Aaya</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Nursing Home / Hospital</p>
+          <p class="doctor-exp"><i class="fas fa-certificate"></i> Trained Nursing Aid</p>
           <div class="doctor-details">
-            <p><strong>Education:</strong> MBBS, MD (Neurology)</p>
-            <p><strong>Specialisation:</strong> Stroke Management</p>
-            <p><strong>Languages:</strong> English, Hindi, Urdu</p>
+            <p><strong>Available for:</strong> Nursing Homes, Hospitals</p>
+            <p><strong>Duties:</strong> Patient hygiene, ward assistance</p>
+            <p><strong>Shift:</strong> Day / night duty available</p>
           </div>
-          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book This Staff</a>
         </div>
       </div>
 
-      <div class="doctor-card fade-in delay-1" data-category="gynecology">
+      <div class="doctor-card fade-in delay-1" data-category="aaya">
         <div class="doctor-img">
-          <img src="https://images.unsplash.com/photo-1643297654416-05795d62e39c?w=500&auto=format&fit=crop&q=80" alt="Dr. Meena Iyer">
-          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+          <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?w=500&auto=format&fit=crop&q=80" alt="Nursing Aid">
+          <div class="doctor-overlay">
+            <div class="doctor-overlay-links">
+              <a href="appointment.html"><i class="fas fa-calendar-check"></i></a>
+              <a href="contact.html"><i class="fas fa-phone-alt"></i></a>
+            </div>
+          </div>
         </div>
         <div class="doctor-info">
-          <h3>Dr. Meena Iyer</h3>
-          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Obstetrician</p>
-          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 13+ Years Experience</p>
+          <h3>Nursing Aid / Helper</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Home &amp; Nursing Home</p>
+          <p class="doctor-exp"><i class="fas fa-certificate"></i> Trained &amp; Background Verified</p>
           <div class="doctor-details">
-            <p><strong>Education:</strong> MBBS, MD (OB-GYN)</p>
-            <p><strong>Specialisation:</strong> Infertility Treatment</p>
-            <p><strong>Languages:</strong> English, Hindi, Tamil</p>
+            <p><strong>Available for:</strong> Home, Hospital, Nursing Homes</p>
+            <p><strong>Duties:</strong> Basic care, ward assistance</p>
+            <p><strong>Shift:</strong> Flexible shift options</p>
           </div>
-          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book This Staff</a>
         </div>
       </div>
 
-      <div class="doctor-card fade-in delay-2" data-category="orthopedics">
+      <div class="doctor-card fade-in delay-2" data-category="physio">
         <div class="doctor-img">
-          <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=500&auto=format&fit=crop&q=80" alt="Dr. Arjun Nair">
-          <div class="doctor-overlay"><div class="doctor-overlay-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="appointment.html"><i class="fas fa-calendar-check"></i></a></div></div>
+          <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=500&auto=format&fit=crop&q=80" alt="Senior Physiotherapist">
+          <div class="doctor-overlay">
+            <div class="doctor-overlay-links">
+              <a href="appointment.html"><i class="fas fa-calendar-check"></i></a>
+              <a href="contact.html"><i class="fas fa-phone-alt"></i></a>
+            </div>
+          </div>
         </div>
         <div class="doctor-info">
-          <h3>Dr. Arjun Nair</h3>
-          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Spine Specialist</p>
-          <p class="doctor-exp"><i class="fas fa-briefcase-medical"></i> 16+ Years Experience</p>
+          <h3>Senior Physiotherapist</h3>
+          <p class="doctor-specialty"><i class="fas fa-circle" style="font-size:.5rem;margin-right:.4rem"></i> Neuro &amp; Ortho Rehab</p>
+          <p class="doctor-exp"><i class="fas fa-certificate"></i> MPT Certified — 5+ Years Exp.</p>
           <div class="doctor-details">
-            <p><strong>Education:</strong> MBBS, MS (Orthopedics)</p>
-            <p><strong>Specialisation:</strong> Spine Surgery</p>
-            <p><strong>Languages:</strong> English, Hindi, Malayalam</p>
+            <p><strong>Qualification:</strong> MPT (Neurology / Orthopaedics)</p>
+            <p><strong>Available for:</strong> Home visits</p>
+            <p><strong>Speciality:</strong> Stroke, post-surgical, spine</p>
           </div>
-          <a href="appointment.html" class="btn btn-primary btn-full">Book Appointment</a>
+          <a href="appointment.html" class="btn btn-primary btn-full">Book This Staff</a>
         </div>
       </div>
 
@@ -219,100 +270,86 @@
   </div>
 </section>
 
+<!-- ========== STAFF STATS ========== -->
 <section class="stats doctor-stats">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat-card fade-in"><div class="stat-number">25<span class="stat-accent">+</span></div><div class="stat-label">Expert Doctors</div></div>
-      <div class="stat-card fade-in delay-1"><div class="stat-number">15<span class="stat-accent">+</span></div><div class="stat-label">Specialties</div></div>
-      <div class="stat-card fade-in delay-2"><div class="stat-number">200<span class="stat-accent">+</span></div><div class="stat-label">Years Combined Experience</div></div>
-      <div class="stat-card fade-in delay-3"><div class="stat-number">50,000<span class="stat-accent">+</span></div><div class="stat-label">Patients Treated</div></div>
+      <div class="stat-card fade-in"><div class="stat-number">100<span class="stat-accent">+</span></div><div class="stat-label">Trained Staff Members</div></div>
+      <div class="stat-card fade-in delay-1"><div class="stat-number">6<span class="stat-accent">+</span></div><div class="stat-label">Staff Categories</div></div>
+      <div class="stat-card fade-in delay-2"><div class="stat-number">500<span class="stat-accent">+</span></div><div class="stat-label">Successful Placements</div></div>
+      <div class="stat-card fade-in delay-3"><div class="stat-number">24<span class="stat-accent">/7</span></div><div class="stat-label">Staff Available</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HOW WE VERIFY ========== -->
+<section class="why-choose">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label" style="background:rgba(0,188,212,.15);color:var(--teal-light)">Staff Quality</span>
+      <h2>How We Screen Our Staff</h2>
+      <div class="section-divider">
+        <div class="line" style="background:rgba(255,255,255,.3)"></div>
+        <div class="dot" style="background:var(--teal-light)"></div>
+        <div class="line" style="background:rgba(255,255,255,.3)"></div>
+      </div>
+      <p style="color:rgba(255,255,255,.65)">We take quality and trust seriously — every staff member goes through a rigorous verification process before they care for your patient</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-icon"><i class="fas fa-id-card"></i></div>
+        <h3>ID &amp; Document Verification</h3>
+        <p>Government-issued ID, nursing council registration, and qualification certificates are verified before any placement.</p>
+      </div>
+      <div class="feature-card fade-in delay-1">
+        <div class="feature-icon"><i class="fas fa-search"></i></div>
+        <h3>Background Check</h3>
+        <p>Every staff member undergoes a thorough background check to ensure complete safety and trustworthiness.</p>
+      </div>
+      <div class="feature-card fade-in delay-2">
+        <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+        <h3>Skills Assessment</h3>
+        <p>Clinical skills and practical nursing knowledge are assessed before we deploy any staff to a patient's home or hospital.</p>
+      </div>
+      <div class="feature-card fade-in delay-3">
+        <div class="feature-icon"><i class="fas fa-star"></i></div>
+        <h3>Performance Monitoring</h3>
+        <p>We collect ongoing feedback from families to ensure consistently high standards of care and professionalism.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="cta">
   <div class="container">
-    <h2>Book an Appointment with Our Specialists</h2>
-    <p>Our expert doctors are ready to provide you with the best medical care possible.</p>
+    <h2>Looking for a Specific Type of Staff?</h2>
+    <p>Call us or fill out our booking form — we will find and deploy the right person for your patient's unique care needs.</p>
     <div class="cta-buttons">
-      <a href="appointment.html" class="btn btn-white btn-large"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+      <a href="appointment.html" class="btn btn-white btn-large"><i class="fas fa-calendar-check"></i> Book a Staff Member</a>
       <a href="contact.html" class="btn btn-outline-white btn-large"><i class="fas fa-phone"></i> Call Us</a>
     </div>
   </div>
 </section>
-<!-- ========== FOOTER ========== -->
+
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand-wrap">
-          <div class="footer-brand">
-            <div class="brand-icon"><i class="fas fa-heartbeat"></i></div>
-            Raj Health Care
-          </div>
-          <div class="footer-tagline">Excellence in Healthcare Since 2004</div>
-        </div>
-        <p class="footer-desc">Providing quality healthcare services with compassion and excellence. Your health and well-being are our highest priority.</p>
-        <div class="social-links">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        </div>
+        <div class="footer-brand-wrap"><div class="footer-brand"><div class="brand-icon"><i class="fas fa-hand-holding-heart"></i></div>Raj Nursing Bureau</div><div class="footer-tagline">We deliver care from our hearts to you.</div></div>
+        <p class="footer-desc">Providing trained nursing staff and medical equipment on rent &amp; sale — 24 hours, all across India.</p>
+        <div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div>
       </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Our Services</a></li>
-          <li><a href="doctors.html">Our Doctors</a></li>
-          <li><a href="appointment.html">Book Appointment</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Specialties</h4>
-        <ul>
-          <li><a href="services.html">General Medicine</a></li>
-          <li><a href="services.html">Cardiology</a></li>
-          <li><a href="services.html">Neurology</a></li>
-          <li><a href="services.html">Pediatrics</a></li>
-          <li><a href="services.html">Orthopedics</a></li>
-          <li><a href="services.html">Gynecology</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact Info</h4>
-        <div class="footer-contact-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <span>123 Health Street, Medical District<br>City — 110001</span>
-        </div>
-        <div class="footer-contact-item">
-          <i class="fas fa-phone-alt"></i>
-          <span><a href="tel:+919876543210">+91 98765 43210</a><br><a href="tel:+919876543211">+91 98765 43211 (Emergency)</a></span>
-        </div>
-        <div class="footer-contact-item">
-          <i class="fas fa-envelope"></i>
-          <span><a href="mailto:info@rajhealthcare.com">info@rajhealthcare.com</a></span>
-        </div>
-        <div class="footer-contact-item">
-          <i class="fas fa-clock"></i>
-          <span>Mon–Sat: 9AM–6PM<br>Emergency: 24/7</span>
-        </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="doctors.html">Our Staff</a></li><li><a href="appointment.html">Book a Service</a></li></ul></div>
+      <div class="footer-col"><h4>Our Services</h4><ul><li><a href="services.html">Home Nursing Care</a></li><li><a href="services.html">Patient Attendants</a></li><li><a href="services.html">Physiotherapy</a></li><li><a href="services.html">Equipment on Rent</a></li></ul></div>
+      <div class="footer-col"><h4>Contact Info</h4>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Gijor, Sector 53, Near C.N.G Petrol Pump, Noida (U.P)</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span><a href="tel:+911234567890">+91 XXXXX XXXXX</a></span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span><a href="mailto:rajnursingbureau@gmail.com">rajnursingbureau@gmail.com</a></span></div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2024 Raj Health Care. All rights reserved.</span>
-      <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Sitemap</a>
-      </div>
-    </div>
+    <div class="footer-bottom"><span>&copy; 2024 Raj Nursing Bureau. All rights reserved.</span><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div>
   </div>
 </footer>
-
 <script src="js/script.js"></script>
 </body>
 </html>

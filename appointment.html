@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Appointment — Raj Health Care</title>
+  <title>Book Services — RAJ NURSING BUREAU</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
 <body>
 <nav class="navbar" id="navbar">
   <div class="container">
-    <a href="index.html" class="nav-brand"><div class="brand-icon"><i class="fas fa-heartbeat"></i></div>Raj Health Care</a>
+    <a href="index.html" class="nav-brand"><div class="brand-icon"><i class="fas fa-heartbeat"></i></div>RAJ NURSING BUREAU</a>
     <div class="nav-menu" id="navMenu">
       <a href="index.html" class="nav-link">Home</a>
       <a href="about.html" class="nav-link">About Us</a>
@@ -31,8 +31,8 @@
   <div class="page-header-pattern"></div>
   <div class="container">
     <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Appointment</span></div>
-    <h1>Book Your Appointment</h1>
-    <p>Schedule a consultation with our expert doctors — quick, easy, and online</p>
+    <h1>Book Healthcare Services</h1>
+    <p>Schedule medical equipment rental or healthcare staff services — quick, easy, and online</p>
   </div>
 </section>
 
@@ -41,7 +41,7 @@
     <div class="appointment-grid">
 
       <div class="appointment-form-card animate-fade-up">
-        <h2>Appointment Details</h2>
+        <h2>Service Request Details</h2>
         <form id="appointmentForm">
           <div class="form-row">
             <div class="form-group">
@@ -89,36 +89,34 @@
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label for="department">Department *</label>
-              <select id="department" name="department" required>
-                <option value="">Select Department</option>
-                <option value="general-medicine">General Medicine</option>
-                <option value="cardiology">Cardiology</option>
-                <option value="neurology">Neurology</option>
-                <option value="pediatrics">Pediatrics</option>
-                <option value="orthopedics">Orthopedics</option>
-                <option value="gynecology">Gynecology</option>
-                <option value="ophthalmology">Ophthalmology</option>
-                <option value="dentistry">Dentistry</option>
-                <option value="pulmonology">Pulmonology</option>
+              <label for="serviceType">Service Type *</label>
+              <select id="serviceType" name="serviceType" required>
+                <option value="">Select Service Type</option>
+                <option value="equipment-rental">Equipment Rental</option>
+                <option value="equipment-purchase">Equipment Purchase</option>
+                <option value="healthcare-staff">Healthcare Staff</option>
+                <option value="home-nursing">Home Nursing Care</option>
+                <option value="physiotherapy">Physiotherapy</option>
+                <option value="hospital-staffing">Hospital Staffing</option>
+                <option value="emergency-equipment">Emergency Equipment</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="doctor">Preferred Doctor</label>
-              <select id="doctor" name="doctor">
-                <option value="">Any Available Doctor</option>
-                <option value="dr-rajesh-kumar">Dr. Rajesh Kumar</option>
-                <option value="dr-priya-sharma">Dr. Priya Sharma</option>
-                <option value="dr-amit-patel">Dr. Amit Patel</option>
-                <option value="dr-sneha-reddy">Dr. Sneha Reddy</option>
-                <option value="dr-vikram-singh">Dr. Vikram Singh</option>
-                <option value="dr-anjali-gupta">Dr. Anjali Gupta</option>
+              <label for="staffType">Staff Type (if applicable)</label>
+              <select id="staffType" name="staffType">
+                <option value="">Not Applicable</option>
+                <option value="male-nurse">Male Nurse</option>
+                <option value="female-nurse">Female Nurse</option>
+                <option value="physiotherapist">Physiotherapist</option>
+                <option value="patient-attendant">Patient Attendant</option>
+                <option value="nursing-aaya">Nursing Aaya</option>
+                <option value="nursing-aid">Nursing Aid</option>
               </select>
             </div>
           </div>
           <div class="form-group">
-            <label for="reason">Reason for Visit *</label>
-            <textarea id="reason" name="reason" rows="4" required placeholder="Please describe your symptoms or reason for consultation..."></textarea>
+            <label for="requirements">Service Requirements *</label>
+            <textarea id="requirements" name="requirements" rows="4" required placeholder="Please describe your medical equipment or staffing requirements..."></textarea>
           </div>
           <div class="form-group">
             <label for="message">Additional Notes (Optional)</label>
@@ -133,60 +131,61 @@
             <label for="reminder">Send me appointment reminders via SMS &amp; Email</label>
           </div>
           <button type="submit" class="btn btn-primary btn-large btn-full" style="margin-top:.5rem">
-            <i class="fas fa-calendar-check"></i> Confirm Appointment
+            <i class="fas fa-calendar-check"></i> Book Service
           </button>
         </form>
       </div>
 
       <div class="appointment-sidebar animate-fade-up delay-2">
         <div class="info-card">
-          <h3><i class="fas fa-check-circle" style="color:var(--teal);margin-right:.5rem"></i> Why Book With Us?</h3>
+          <h3><i class="fas fa-check-circle" style="color:var(--teal);margin-right:.5rem"></i> Why Choose Us?</h3>
           <ul class="info-list">
-            <li><i class="fas fa-check-circle"></i> Expert board-certified specialists</li>
-            <li><i class="fas fa-check-circle"></i> Modern diagnostic equipment</li>
-            <li><i class="fas fa-check-circle"></i> Flexible appointment scheduling</li>
-            <li><i class="fas fa-check-circle"></i> Personalised patient care</li>
+            <li><i class="fas fa-check-circle"></i> Trained healthcare professionals</li>
+            <li><i class="fas fa-check-circle"></i> Quality medical equipment</li>
+            <li><i class="fas fa-check-circle"></i> Flexible rental periods</li>
+            <li><i class="fas fa-check-circle"></i> All India delivery</li>
             <li><i class="fas fa-check-circle"></i> 24/7 emergency support</li>
-            <li><i class="fas fa-check-circle"></i> Insurance accepted</li>
+            <li><i class="fas fa-check-circle"></i> Maintenance included</li>
           </ul>
         </div>
 
         <div class="info-card">
-          <h3>Appointment Info</h3>
+          <h3>Service Info</h3>
           <div class="info-item">
             <div class="info-item-icon"><i class="fas fa-clock"></i></div>
             <div class="info-item-text">
               <h4>Working Hours</h4>
               <p>Monday – Saturday: 9:00 AM – 6:00 PM</p>
-              <p>Sunday: 10:00 AM – 2:00 PM</p>
+              <p>Sunday: Closed</p>
+              <p>24/7 Emergency Service Available</p>
             </div>
           </div>
           <div class="info-item">
             <div class="info-item-icon"><i class="fas fa-phone-alt"></i></div>
             <div class="info-item-text">
-              <h4>Appointment Helpline</h4>
-              <p><a href="tel:+919876543212" style="color:var(--teal)">+91 98765 43212</a></p>
+              <h4>Service Helpline</h4>
+              <p><a href="tel:+919876543210" style="color:var(--teal)">+91 98765 43210</a></p>
             </div>
           </div>
           <div class="info-item">
             <div class="info-item-icon"><i class="fas fa-envelope"></i></div>
             <div class="info-item-text">
               <h4>Email Us</h4>
-              <p><a href="mailto:appointments@rajhealthcare.com" style="color:var(--teal)">appointments@rajhealthcare.com</a></p>
+              <p><a href="mailto:rajnursingbureau@gmail.com" style="color:var(--teal)">rajnursingbureau@gmail.com</a></p>
             </div>
           </div>
           <div class="info-item">
             <div class="info-item-icon"><i class="fas fa-info-circle"></i></div>
             <div class="info-item-text">
-              <h4>What to Bring</h4>
-              <p>ID proof, insurance card, previous medical records &amp; any test reports</p>
+              <h4>What to Provide</h4>
+              <p>ID proof, address proof, medical requirements, and duration of service needed</p>
             </div>
           </div>
         </div>
 
         <div class="info-card emergency-card-small">
-          <h3><i class="fas fa-ambulance" style="margin-right:.5rem"></i> Emergency Services</h3>
-          <p>For medical emergencies, call our 24/7 emergency helpline immediately:</p>
+          <h3><i class="fas fa-phone-alt" style="margin-right:.5rem"></i> Emergency Support</h3>
+          <p>For urgent equipment needs or emergency staffing, call our 24/7 helpline:</p>
           <div class="emg-num"><i class="fas fa-phone-alt"></i> +91 98765 43211</div>
         </div>
       </div>
@@ -235,11 +234,11 @@
         <div class="footer-brand-wrap">
           <div class="footer-brand">
             <div class="brand-icon"><i class="fas fa-heartbeat"></i></div>
-            Raj Health Care
+            RAJ NURSING BUREAU
           </div>
-          <div class="footer-tagline">Excellence in Healthcare Since 2004</div>
+          <div class="footer-tagline">We deliver care from our hearts to you</div>
         </div>
-        <p class="footer-desc">Providing quality healthcare services with compassion and excellence. Your health and well-being are our highest priority.</p>
+        <p class="footer-desc">Providing comprehensive medical equipment solutions and trained healthcare professionals across India with compassion and excellence. Your health and comfort are our highest priority.</p>
         <div class="social-links">
           <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -261,36 +260,36 @@
       <div class="footer-col">
         <h4>Specialties</h4>
         <ul>
-          <li><a href="services.html">General Medicine</a></li>
-          <li><a href="services.html">Cardiology</a></li>
-          <li><a href="services.html">Neurology</a></li>
-          <li><a href="services.html">Pediatrics</a></li>
-          <li><a href="services.html">Orthopedics</a></li>
-          <li><a href="services.html">Gynecology</a></li>
+          <li><a href="services.html">Medical Equipment</a></li>
+          <li><a href="services.html">Healthcare Staff</a></li>
+          <li><a href="services.html">Home Care</a></li>
+          <li><a href="services.html">Equipment Rental</a></li>
+          <li><a href="services.html">Physiotherapy</a></li>
+          <li><a href="services.html">Hospital Staffing</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Contact Info</h4>
         <div class="footer-contact-item">
           <i class="fas fa-map-marker-alt"></i>
-          <span>123 Health Street, Medical District<br>City — 110001</span>
+          <span>Gijor, Sector 53, Near C.N.G Petrol Pump<br>Noida (U.P), India</span>
         </div>
         <div class="footer-contact-item">
           <i class="fas fa-phone-alt"></i>
-          <span><a href="tel:+919876543210">+91 98765 43210</a><br><a href="tel:+919876543211">+91 98765 43211 (Emergency)</a></span>
+          <span><a href="tel:+919876543210">+91 98765 43210</a><br><a href="tel:+919876543211">+91 98765 43211 (24/7)</a></span>
         </div>
         <div class="footer-contact-item">
           <i class="fas fa-envelope"></i>
-          <span><a href="mailto:info@rajhealthcare.com">info@rajhealthcare.com</a></span>
+          <span><a href="mailto:rajnursingbureau@gmail.com">rajnursingbureau@gmail.com</a></span>
         </div>
         <div class="footer-contact-item">
           <i class="fas fa-clock"></i>
-          <span>Mon–Sat: 9AM–6PM<br>Emergency: 24/7</span>
+          <span>Mon–Sat: 9AM–6PM<br>All India: 24/7 Service</span>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2024 Raj Health Care. All rights reserved.</span>
+      <span>&copy; 2024 RAJ NURSING BUREAU. All rights reserved.</span>
       <div class="footer-bottom-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>
